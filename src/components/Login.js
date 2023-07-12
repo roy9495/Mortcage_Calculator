@@ -1,15 +1,12 @@
-import * as React from "react";
-import {
-  Experimental_CssVarsProvider as CssVarsProvider,
-  useColorScheme,
-} from '@mui/material/styles';
-import Sheet from "@mui/joy/Sheet";
-import Typography from "@mui/joy/Typography";
-import FormControl from "@mui/joy/FormControl";
-import FormLabel from "@mui/joy/FormLabel";
-import Input from "@mui/joy/Input";
-import Button from "@mui/joy/Button";
-import Link from "@mui/joy/Link";
+import * as React from 'react';
+import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
+import Sheet from '@mui/joy/Sheet';
+import Typography from '@mui/joy/Typography';
+import FormControl from '@mui/joy/FormControl';
+import FormLabel from '@mui/joy/FormLabel';
+import Input from '@mui/joy/Input';
+import Button from '@mui/joy/Button';
+import Link from '@mui/joy/Link';
 
 function ModeToggle() {
   const { mode, setMode } = useColorScheme();
