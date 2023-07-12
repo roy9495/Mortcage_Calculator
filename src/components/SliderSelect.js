@@ -7,10 +7,10 @@ const SliderSelect = ({ data, setData }) => {
       <SliderComponent
         label="Home Value"
         min={1000}
-        max={10000}
+        max={100000}
         defaultValue={data.homeValue}
         value={data.homeValue}
-        step={100}
+        step={2000}
         onChange={(e, value) => setData({
           ...data,
           downPayment: value * 0.2,
@@ -26,7 +26,7 @@ const SliderSelect = ({ data, setData }) => {
         max={data.homeValue}
         defaultValue={data.downPayment}
         value={data.downPayment}
-        step={100}
+        step={2000}
         onChange={(e, value) => setData({
            ...data,
            loanAmount: (data.homeValue - value),
@@ -40,11 +40,11 @@ const SliderSelect = ({ data, setData }) => {
         min={0}
         max={data.homeValue}
         defaultValue={data.loanAmount}
-        step={100}
+        step={2000}
         onChange={(e, value) => setData({
-          ...data,
-          downPayment: ( data.homeValue - value),
-          loanAmount: value
+           ...data,
+           downPayment: ( data.homeValue - value ),
+           loanAmount: value
         })}
         unit="$"
         amount={data.loanAmount}
@@ -55,7 +55,7 @@ const SliderSelect = ({ data, setData }) => {
         max={18}
         defaultValue={data.interestRate}
         value={data.interestRate}
-        step={1}
+        step={0.25}
         onChange={(e, value) => setData({
           ...data,
           interestRate: value
@@ -66,5 +66,6 @@ const SliderSelect = ({ data, setData }) => {
     </>
   );
 };
+
 
 export default SliderSelect;
